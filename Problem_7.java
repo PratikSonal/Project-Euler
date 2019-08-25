@@ -10,7 +10,7 @@ public class Problem_7 {
       if (n < 2) {return false;}
         else if (n == 2) {return true;}
 	        
-      for (int i = 2; i < Math.sqrt(n) + 1; i++)
+      for (int i = 3; i < Math.sqrt(n) + 1; i+=2)
             { if (n % i == 0)
              
             {return false;}
@@ -24,7 +24,7 @@ public class Problem_7 {
 	  
 	   int a=1;
 	  
-	   for(int i=3;i>0;i=i+2)
+	   for(int i=3;i>0;i= i+=2)
 	  
 	   {
 	   	   if(isPrime(i)==true)

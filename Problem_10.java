@@ -10,7 +10,7 @@ public class Problem_10 {
         {    
 	       if (n < 2) {return false;}
            else if (n == 2) {return true;}
-           for (int a = 2; a < Math.sqrt(n) + 1; a++)
+           for (int a = 3; a < Math.sqrt(n) + 1; a += 2)
                   {
                       if (n % a == 0)
                       {

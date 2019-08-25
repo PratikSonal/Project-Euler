@@ -1,22 +1,13 @@
-/*
-Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 
- */
 public class Problem_6 {
 
 	public static void main(String[] args) {
 		
-        int a = 0, b = 0;
-        for (int i = 1; i <= 100; i++) {   
-           
-        	a += i;
-            b += (i*i);
-            
-        }
-		
-        int x = (a*a) - b;
-        
-        System.out.println(x);
+		int i=100;
+	    int a=(i*(i+1))/2;
+	    int b=(i*(i+1)*(2*i+1))/6;
+	    int c=a*a;
+	    System.out.println(c-b);
 
 	}
 

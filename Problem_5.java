@@ -5,27 +5,34 @@ What is the smallest positive number that is evenly divisible by all of the numb
 
  */
 public class Problem_5 {
-
-	public static void main(String[] args) {
+	
+public static int LCM(int n1, int n2) {
 		
-		    int min = 11;
-			int max = 20;
-			long num = 2520;
-			int i = 11;
+		int lcm = 0;
+		
+		for (int i = 1; i < n2; i++) {
 			
-			while (i <= 20) {
-			    
-			    for (i = min; i <= max; i++) {
-					if ((num % i) != 0) {
-						num = num+1;
-						break;}
-						
-			    }
-			    
-			}
+			lcm = (n1 > i) ? n1 : i;
 			
-			System.out.println(num);
-
+			 for (lcm = (n1 > i) ? n1 : i; lcm <= (n1*n2); lcm++) {
+		         
+				 if(lcm % n1 == 0 && lcm % i == 0){
+		           
+				   n1 = lcm;
+		           break;
+		    
+			   }
+		        
+				 lcm += 1;
+				 
+		       }
+		}  
+	   return lcm;
+	 }	
+	
+public static void main(String[] args) {
+		
+		System.out.println(LCM(1, 20));
 	}
-
+	
 }
